@@ -31,26 +31,31 @@ const features = [
 
 const ExperienceSection = () => {
   return (
-    <section className="py-16 bg-white text-onyx">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-xl md:text-2xl font-bold uppercase mb-2">
+    <section className="py-20 bg-gray-50 text-onyx">
+      <div className="max-w-6xl mx-auto px-4 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold uppercase mb-3">
           Disfruta una experiencia de compra sin complicaciones
         </h2>
         <p className="mb-12 text-sm text-gray-600">
           Descubre nuestros servicios en línea y en tienda.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((item, index) => (
-            <div key={index} className="flex flex-col items-center text-center px-4">
-              <div className="mb-4 text-onyx">{item.icon}</div>
-              <h3 className="text-sm font-bold uppercase whitespace-pre-line mb-3">
+            <div
+              key={index}
+              className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md"
+            >
+              <div className="mb-4 bg-celadonBlue/10 p-3 rounded-full text-celadonBlue">
+                {item.icon}
+              </div>
+              <h3 className="text-sm font-semibold uppercase whitespace-pre-line mb-2">
                 {item.title}
               </h3>
               <p className="text-sm text-gray-600 mb-4">{item.description}</p>
               <a
                 href="#"
-                className="text-xs font-semibold underline hover:text-ripeMango transition-colors duration-200"
+                className="text-xs font-semibold text-celadonBlue hover:text-tiffanyBlue transition-colors"
               >
                 DESCUBRIR MÁS
               </a>
