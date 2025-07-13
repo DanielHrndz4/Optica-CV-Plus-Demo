@@ -13,6 +13,10 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+			tiffanyBlue: '#00ABC8',
+			celadonBlue: '#0083AD',
+			ripeMango: '#FFC629',
+			onyx: '#373A36',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
