@@ -15,33 +15,54 @@ import GlassesRayban from "@/components/demo/rayban.glasses"
 import KidsGlasses from "@/components/demo/kids.glasses"
 import ExperienceSection from "@/components/demo/experience.section"
 import Footer from "@/components/demo/footer"
+import AnimatedSection from "@/components/ui/animated-section"
+import DemoPopup from "@/components/demo/demo.popup"
 
 export default function OpticaCVPlus() {
   return (
     <div className="flex flex-col min-h-screen">
+      <DemoPopup />
       {/* Header */}
       <Nav />
       <main className="flex-1">
         {/* Hero Section */}
-        <HeroSection/>
-        <Brands/>
+        <AnimatedSection>
+          <HeroSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Brands />
+        </AnimatedSection>
         {/* Glasses Section */}
-        <Glasses />
+        <AnimatedSection>
+          <Glasses />
+        </AnimatedSection>
         {/* Hugo Boss Section */}
-        <HugoBoss />
+        <AnimatedSection>
+          <HugoBoss />
+        </AnimatedSection>
 
         {/* Ray-Ban Section */}
-        <RaybanSection />
-        <GlassesRayban/>
+        <AnimatedSection>
+          <RaybanSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <GlassesRayban />
+        </AnimatedSection>
 
         {/* Test Exam Section */}
-        <TestExam />
+        <AnimatedSection>
+          <TestExam />
+        </AnimatedSection>
 
         {/* Kids Glasses Section */}
-        <KidsGlasses />
+        <AnimatedSection>
+          <KidsGlasses />
+        </AnimatedSection>
 
         {/* Experience Section */}
-        <ExperienceSection />
+        <AnimatedSection>
+          <ExperienceSection />
+        </AnimatedSection>
       </main>
 
       {/* Footer */}
