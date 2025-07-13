@@ -24,6 +24,8 @@ export default function DemoPopup() {
           <DialogTitle>Demo Óptica CV+</DialogTitle>
           <DialogDescription>
             Esta es una demo realizada por Fantasma Digital en un tiempo estimado de 12h para demostrar el trabajo y compromiso que tenemos con el proyecto. Muchas funcionalidades y vistas podrán estar disponibles en la fase de desarrollo si el contrato es aceptado.
+            <br /><br />
+            <strong>Nota:</strong> Las marcas, modelos y precios mostrados son únicamente de carácter demostrativo y no representan productos reales ni precios finales.
           </DialogDescription>
         </DialogHeader>
         <div className="flex justify-end">
