@@ -44,39 +44,39 @@ export default function OpticaCVPlus() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="container px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <footer className="bg-onyx text-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <Eye className="h-8 w-8 text-blue-400" />
+                <Eye className="h-8 w-8 text-ripeMango" />
                 <span className="text-2xl font-bold">Óptica CV+</span>
               </div>
-              <p className="text-gray-400">
+              <p className="text-gray-300">
                 Tu visión es nuestra pasión. Más de 25 años cuidando la salud visual de nuestros clientes.
               </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Productos</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="text-lg font-semibold mb-4 text-ripeMango">Productos</h3>
+              <ul className="space-y-2 text-gray-300">
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="hover:text-ripeMango transition-colors">
                     Lentes Graduados
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="hover:text-ripeMango transition-colors">
                     Lentes de Sol
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="hover:text-ripeMango transition-colors">
                     Lentes de Contacto
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="hover:text-ripeMango transition-colors">
                     Accesorios
                   </Link>
                 </li>
@@ -84,25 +84,25 @@ export default function OpticaCVPlus() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Servicios</h3>
-              <ul className="space-y-2 text-gray-400">
+              <h3 className="text-lg font-semibold mb-4 text-ripeMango">Servicios</h3>
+              <ul className="space-y-2 text-gray-300">
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="hover:text-ripeMango transition-colors">
                     Examen Visual
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="hover:text-ripeMango transition-colors">
                     Ajuste de Monturas
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="hover:text-ripeMango transition-colors">
                     Reparaciones
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="#" className="hover:text-ripeMango transition-colors">
                     Garantías
                   </Link>
                 </li>
@@ -110,8 +110,8 @@ export default function OpticaCVPlus() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Contacto</h3>
-              <div className="space-y-3 text-gray-400">
+              <h3 className="text-lg font-semibold mb-4 text-ripeMango">Contacto</h3>
+              <div className="space-y-3 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
                   <span>Av. Principal 123, Ciudad</span>
@@ -128,7 +128,7 @@ export default function OpticaCVPlus() {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <div className="border-t border-white/20 mt-12 pt-8 text-center text-gray-300">
             <p>&copy; {new Date().getFullYear()} Óptica CV+. Todos los derechos reservados.</p>
           </div>
         </div>
