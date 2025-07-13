@@ -31,12 +31,12 @@ const features = [
 
 const ExperienceSection = () => {
   return (
-    <section className="py-20 bg-gray-50 text-onyx">
-      <div className="max-w-6xl mx-auto px-4 text-center">
+    <section className="pb-20 pt-10 bg-white text-onyx">
+      <div className="max-w-[80%] mx-auto px-4 text-center">
         <h2 className="text-2xl md:text-3xl font-bold uppercase mb-3">
           Disfruta una experiencia de compra sin complicaciones
         </h2>
-        <p className="mb-12 text-sm text-gray-600">
+        <p className="mb-12 text-lg text-gray-600">
           Descubre nuestros servicios en línea y en tienda.
         </p>
 
@@ -44,18 +44,18 @@ const ExperienceSection = () => {
           {features.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md"
+              className="flex flex-col items-center text-center p-6 rounded-lg"
             >
               <div className="mb-4 bg-celadonBlue/10 p-3 rounded-full text-celadonBlue">
                 {item.icon}
               </div>
-              <h3 className="text-sm font-semibold uppercase whitespace-pre-line mb-2">
+              <h3 className="text-lg font-semibold uppercase whitespace-pre-line mb-2">
                 {item.title}
               </h3>
-              <p className="text-sm text-gray-600 mb-4">{item.description}</p>
+              <p className="text-lg text-onyx mb-4">{item.description}</p>
               <a
                 href="#"
-                className="text-xs font-semibold text-celadonBlue hover:text-tiffanyBlue transition-colors"
+                className="text-sm font-semibold text-celadonBlue hover:text-ripeMango transition-colors"
               >
                 DESCUBRIR MÁS
               </a>

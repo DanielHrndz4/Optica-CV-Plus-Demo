@@ -1,20 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { glasses } from "@/constants/glasses.constants";
 import { ArrowRight, Heart } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { RBglasses } from "@/constants/glasses.constants";
 
 const GlassesRayban = () => {
     const [activeCategory, setActiveCategory] = useState("Todos");
 
     const filteredGlasses =
         activeCategory === "Todos"
-            ? glasses
-            : glasses.filter((g) => g.category === activeCategory);
+            ? RBglasses
+            : RBglasses.filter((g) => g.category === activeCategory);
 
     return (
         <section id="gafas-oftalmicas" className="py-5">

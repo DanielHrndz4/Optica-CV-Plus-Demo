@@ -7,7 +7,7 @@ const TestExam = () => {
                     <h1 className="text-4xl font-bold text-onyx mb-6">
                     Exámenes Visuales Profesionales
                 </h1>
-                <p className="text-lg text-gray-700 mb-8">
+                <p className="text-lg text-onyx mb-8">
                     Agenda tu prueba de visión con nuestros especialistas certificados. 
                     Tecnología de precisión para evaluar tu salud ocular y corregir 
                     cualquier problema de visión con los más altos estándares.
