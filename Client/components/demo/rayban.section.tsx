@@ -18,7 +18,7 @@ const RaybanSection = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent xl:hidden" />
 
       {/* Contenido */}
-      <div className="px-6 relative z-10 h-full w-full xl:px-4 flex flex-col xl:justify-start justify-end items-center text-center pt-10 xl:pt-24 pb-10 animate-fade-up">
+      <div className="px-6 relative z-10 h-full w-full xl:px-4 flex flex-col xl:justify-start justify-end items-center text-center pt-8 xl:pt-24 pb-10 animate-fade-up">
         <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
           Descubre la colección Ray-Ban
         </h2>
