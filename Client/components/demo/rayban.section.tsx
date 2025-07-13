@@ -11,15 +11,18 @@ const RaybanSection = () => {
         }}
       />
 
-      {/* Capa oscura sutil */}
-      <div className="absolute inset-0 bg-black/20" />
+      {/* Capa oscura general */}
+      <div className="absolute inset-0 bg-black/30" />
 
-      {/* Contenido arriba */}
-      <div className="relative z-10 flex flex-col items-center text-center h-full px-4 pt-20 md:pt-24">
-        <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
+      {/* Degradado desde abajo en móviles */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent xl:hidden" />
+
+      {/* Contenido */}
+      <div className="px-6 relative z-10 h-full w-full xl:px-4 flex flex-col xl:justify-start justify-end items-center text-center pt-10 xl:pt-24 pb-10 animate-fade-up">
+        <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
           Descubre la colección Ray-Ban
         </h2>
-        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-xl drop-shadow-md">
+        <p className="text-base md:text-xl text-white/90 mb-6 max-w-xl drop-shadow-md">
           Estilo clásico, innovación atemporal. Diseñados para destacar en cada mirada.
         </p>
       </div>

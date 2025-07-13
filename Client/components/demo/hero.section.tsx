@@ -19,8 +19,8 @@ const HeroSection = () => {
           {/* Contenido visible */}
           <div className="relative z-20 flex flex-col items-center justify-end text-center h-full text-white px-4 pb-16">
             <img src="/svg/ray-meta.svg" alt="Ray Meta" className="pb-6" />
-            <h1 className="text-4xl lg:text-5xl font-extrabold drop-shadow-lg">Explora la Nueva Colección</h1>
-            <p className="mt-4 text-lg lg:text-xl max-w-2xl drop-shadow-md">
+            <h1 className="text-4xl xl:text-5xl font-extrabold drop-shadow-lg">Explora la Nueva Colección</h1>
+            <p className="mt-4 text-lg xl:text-xl max-w-2xl drop-shadow-md">
               Descubre el diseño, innovación y estilo de la temporada. Inspirado en la visión del mañana.
             </p>
             <div className="flex flex-row gap-3">

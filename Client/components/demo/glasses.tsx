@@ -19,12 +19,12 @@ const Glasses = () => {
             : glasses.filter((g) => g.category === activeCategory);
 
     return (
-        <section id="gafas-oftalmicas" className="py-16">
+        <section id="gafas-oftalmicas" className="py-4 xl:py-16">
             <div className="w-full mx-auto px-4">
                 {/* Título + Filtros */}
                 <div className="flex w-[95%] mx-auto flex-col md:flex-row justify-between items-center mb-8 gap-4">
                     <h2 className="text-3xl font-bold text-onyx">Nuestros productos</h2>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-nowrap xl:flex-wrap gap-3">
                         {categories.map((cat) => (
                             <button
                                 key={cat}
@@ -40,7 +40,7 @@ const Glasses = () => {
                     </div>
                     <a
                         href="#"
-                        className="flex flex-row gap-2 hover:text-ripeMango text-onyx hover:underline transition-all duration-300 font-semibold"
+                        className="flex flex-row gap-2 hover:text-ripeMango text-onyx hover:underline transition-all duration-300 font-semibold pt-2 xl:pt-0"
                     >
                         Ver todo <ArrowRight />
                     </a>

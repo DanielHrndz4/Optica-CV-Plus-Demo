@@ -19,7 +19,7 @@ const GlassesRayban = () => {
     return (
         <section id="gafas-oftalmicas" className="py-5">
             {/* Título + Filtros */}
-            <div className="flex w-[95%] mx-auto flex-col md:flex-row justify-between items-center mb-5 gap-4">
+            <div className="flex w-[95%] mx-auto flex-row justify-between items-center mb-5 gap-4">
                 <img src="/img/brands/rb.png" alt="Ray-ban" className="w-36"/>
                 <a
                     href="#"

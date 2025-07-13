@@ -3,15 +3,15 @@ import Link from "next/link";
 
 const Footer = () => {
     return(
-        <footer className="bg-[#252525] text-white py-16">
+        <footer className="bg-[#252525] text-white py-5 xl:py-16 text-center xl:text-start">
         <div className="max-w-[80%] mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-10">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-tiffanyBlue">Síguenos</h3>
               <p className="text-gray-300">
                 Conéctate con nosotros en nuestras redes sociales.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center xl:justify-start">
                 <Link href="#" className="text-gray-300 hover:text-tiffanyBlue transition-colors">
                   <Facebook className="w-5 h-5" />
                 </Link>
@@ -79,7 +79,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            <div className="flex flex-col justify-center items-center xl:justify-start xl:items-start">
               <h3 className="text-lg font-semibold mb-4 text-tiffanyBlue">Contacto</h3>
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center space-x-2">
