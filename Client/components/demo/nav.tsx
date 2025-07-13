@@ -79,13 +79,13 @@ const menuContent: Record<MenuSectionKey, MenuSection> = {
 const Nav = () => {
     const [openItem, setOpenItem] = useState<MenuSectionKey | null>(null);
 
-    const handleItemClick = (itemName: string) => {
-        // Solo abre el menú si el item clickeado es diferente al actualmente abierto
-        if (openItem === itemName) {
+    const handleItemClick = (menuKey?: MenuSectionKey) => {
+        if (!menuKey) {
             setOpenItem(null);
-        } else {
-            setOpenItem(itemName as MenuSectionKey);
+            return;
         }
+
+        setOpenItem((prev) => (prev === menuKey ? null : menuKey));
     };
 
     const closeMenu = () => {
@@ -166,20 +166,30 @@ const Nav = () => {
 
                     {/* Navegación */}
                     <nav className="hidden xl:flex items-center space-x-8 justify-center">
-                        {nav.map((item) => (
-                            <button
-                                key={item.href}
-                                onClick={() => handleItemClick(item.name)}
-                                className={cn(
-                                    "relative text-md font-medium font-sans uppercase transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-tiffanyBlue after:transition-all after:duration-300",
-                                    openItem === item.name
-                                        ? "text-tiffanyBlue after:w-full"
-                                        : "after:w-0 hover:text-tiffanyBlue hover:after:w-full"
-                                )}
-                            >
-                                {item.name}
-                            </button>
-                        ))}
+                        {nav.map((item) =>
+                            item.menu ? (
+                                <button
+                                    key={item.href}
+                                    onClick={() => handleItemClick(item.menu)}
+                                    className={cn(
+                                        "relative text-md font-medium font-sans uppercase transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:bg-tiffanyBlue after:transition-all after:duration-300",
+                                        openItem === item.menu
+                                            ? "text-tiffanyBlue after:w-full"
+                                            : "after:w-0 hover:text-tiffanyBlue hover:after:w-full"
+                                    )}
+                                >
+                                    {item.name}
+                                </button>
+                            ) : (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className="relative text-md font-medium font-sans uppercase transition-all duration-300 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-tiffanyBlue after:transition-all after:duration-300 hover:text-tiffanyBlue hover:after:w-full"
+                                >
+                                    {item.name}
+                                </Link>
+                            )
+                        )}
                     </nav>
 
                     {/* Botones y iconos */}
@@ -219,12 +229,21 @@ const Nav = () => {
                                 <nav className="flex flex-col space-y-4 mt-8">
                                     {nav.map((item) => (
                                         <SheetClose asChild key={item.href}>
-                                            <button
-                                                onClick={() => handleItemClick(item.name)}
-                                                className="text-left text-base font-medium uppercase text-gray-700 hover:text-tiffanyBlue"
-                                            >
-                                                {item.name}
-                                            </button>
+                                            {item.menu ? (
+                                                <button
+                                                    onClick={() => handleItemClick(item.menu)}
+                                                    className="text-left text-base font-medium uppercase text-gray-700 hover:text-tiffanyBlue"
+                                                >
+                                                    {item.name}
+                                                </button>
+                                            ) : (
+                                                <Link
+                                                    href={item.href}
+                                                    className="text-left text-base font-medium uppercase text-gray-700 hover:text-tiffanyBlue"
+                                                >
+                                                    {item.name}
+                                                </Link>
+                                            )}
                                         </SheetClose>
                                     ))}
                                 </nav>
