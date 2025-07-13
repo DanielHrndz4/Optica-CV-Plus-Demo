@@ -16,6 +16,11 @@ const HeroSection = () => {
           {/* Capa opcional de oscurecimiento */}
           <div className="absolute inset-0 bg-black/40 z-10"></div>
 
+          {/* Capa animada representando un lente */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 animate-rotate-slow">
+            <div className="w-[120%] h-[120%] rounded-full bg-gradient-radial from-tiffanyBlue/30 via-white/20 to-transparent animate-focus-glow" />
+          </div>
+
           {/* Contenido visible */}
           <div className="relative z-20 flex flex-col items-center justify-end text-center h-full text-white px-4 pb-16">
             <img src="/svg/ray-meta.svg" alt="Ray Meta" className="pb-6" />
