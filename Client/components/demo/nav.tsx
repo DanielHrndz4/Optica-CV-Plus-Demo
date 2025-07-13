@@ -3,13 +3,41 @@
 import { icon, nav } from "@/constants/demo.constants";
 import { Download, Headset, Store, Menu } from "lucide-react";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useState } from "react";
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+} from "@/components/ui/dialog";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const Nav = () => {
+    const [openItem, setOpenItem] = useState<string | null>(null);
+
     return (
+        <>
+        <Dialog open={!!openItem} onOpenChange={(o) => !o && setOpenItem(null)}>
+            <DialogContent className="max-w-sm">
+                <DialogHeader>
+                    <DialogTitle>{openItem}</DialogTitle>
+                </DialogHeader>
+                <nav className="mt-4 flex flex-col gap-3">
+                    <Link href="#" className="text-sm hover:underline">
+                        Sub opción 1
+                    </Link>
+                    <Link href="#" className="text-sm hover:underline">
+                        Sub opción 2
+                    </Link>
+                    <Link href="#" className="text-sm hover:underline">
+                        Sub opción 3
+                    </Link>
+                </nav>
+            </DialogContent>
+        </Dialog>
         <header className="fixed top-0 z-50 w-full border-b pb-2 bg-white backdrop-blur">
             {/* Banner superior - Solo desktop */}
             <div className="hidden xl:block h-[36px] bg-[#f6f6f6]">
@@ -77,13 +105,13 @@ const Nav = () => {
                 {/* Navegación */}
                 <nav className="hidden xl:flex items-center space-x-8 justify-center">
                     {nav.map((item) => (
-                        <Link
+                        <button
                             key={item.href}
-                            href={item.href}
+                            onClick={() => setOpenItem(item.name)}
                             className="relative text-md font-medium font-sans uppercase transition-all duration-300 hover:text-tiffanyBlue after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-tiffanyBlue after:transition-all after:duration-300 hover:after:w-full"
                         >
                             {item.name}
-                        </Link>
+                        </button>
                     ))}
                 </nav>
 
@@ -123,13 +151,14 @@ const Nav = () => {
                             </div>
                             <nav className="flex flex-col space-y-4 mt-8">
                                 {nav.map((item) => (
-                                    <Link
-                                        key={item.href}
-                                        href={item.href}
-                                        className="text-base font-medium uppercase text-gray-700 hover:text-tiffanyBlue"
-                                    >
-                                        {item.name}
-                                    </Link>
+                                    <SheetClose asChild key={item.href}>
+                                        <button
+                                            onClick={() => setOpenItem(item.name)}
+                                            className="text-left text-base font-medium uppercase text-gray-700 hover:text-tiffanyBlue"
+                                        >
+                                            {item.name}
+                                        </button>
+                                    </SheetClose>
                                 ))}
                             </nav>
                         </SheetContent>
@@ -137,6 +166,7 @@ const Nav = () => {
                 </div>
             </div>
         </header>
+        </>
     )
 }
 
