@@ -13,7 +13,7 @@ const Nav = () => {
         <header className="fixed top-0 z-50 w-full border-b pb-2 bg-white backdrop-blur">
             {/* Banner superior - Solo desktop */}
             <div className="hidden xl:block h-[36px] bg-[#f6f6f6]">
-                <div className="w-[90%] mx-auto flex flex-row justify-between h-full">
+                <div className="w-[95%] mx-auto flex flex-row justify-between h-full">
                     <div className="flex items-center text-sm text-gray-600 gap-4">
                         <span className="flex flex-row gap-2 items-center hover:cursor-pointer hover:underline hover:text-[#252525]">
                             <Store className="w-5" /> Nuestras sucursales
